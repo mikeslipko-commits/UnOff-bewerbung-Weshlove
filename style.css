@@ -1,0 +1,308 @@
+/* Globale Einstellungen & Dein Familien-Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0c0e; /* Tiefschwarz für den Hintergrund */
+    color: #d1d2d3;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(40, 45, 50, 0.95); /* Deine Familienfarbe */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #32373d;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #d1d2d3;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Hero / Startseite */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(11, 12, 14, 0.8), rgba(40, 45, 50, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.slogan {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.quick-info {
+    background: rgba(40, 45, 50, 0.6); /* Deine Familienfarbe transparent */
+    padding: 15px 25px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quick-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: rgb(40, 45, 50); /* Deine Familienfarbe */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #5a6169;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #32373d;
+    transform: translateY(-2px);
+}
+
+/* Inhalts-Bereiche (Sections) */
+.content-section {
+    padding: 100px 10%;
+}
+
+.bg-alt {
+    background-color: #121417;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: rgb(40, 45, 50); /* Deine Familienfarbe */
+    border-radius: 2px;
+}
+
+.card {
+    background-color: #1a1d21;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid rgb(40, 45, 50); /* Deine Familienfarbe */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Grid Layout für Spalten */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+ul {
+    list-style-position: inside;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Visuelle Identität / Galerie */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.gallery-card {
+    background-color: #1a1d21;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #1a1d21;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    border-color: rgb(40, 45, 50); /* Deine Familienfarbe leuchtet beim Hover auf */
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #0b0c0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4e5359;
+    font-weight: bold;
+    position: relative;
+    border-bottom: 2px solid #1a1d21;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery-info {
+    padding: 20px;
+}
+
+.gallery-info h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Farb-Anzeige für das Auto */
+.color-box-container {
+    margin-top: 10px;
+    background: rgba(11, 12, 14, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.color-row {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.color-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #fff;
+}
+
+/* Dynamische Zuweisung deiner RGB-Farben */
+.primary-color {
+    background-color: rgb(40, 45, 50); /* Primär: Dein Familien-RGB */
+}
+
+.secondary-color {
+    background-color: rgb(20, 22, 25); /* Sekundär: Ein dunklerer Kontrast-Ton */
+}
+
+/* Impressum & Footer */
+footer {
+    background-color: #07080a;
+    padding: 60px 10% 30px 10%;
+    border-top: 2px solid #1a1d21;
+}
+
+.footer-content h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.disclaimer {
+    margin-top: 25px;
+    color: #5a6169;
+    font-size: 0.85rem !important;
+}
+
+.copy {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #3a3f44;
+}
+
+/* Responsive Anpassung für Handys */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav {
+        margin-top: 15px;
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .slogan {
+        font-size: 1.1rem;
+    }
+    
+}
+
+/* Entfernt alle Unterstriche von Links und Texten weltweit */
+a, h1, h2, h3, h4, h5, h6, p, span {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* Blendet dekorative Balken/Striche unter allen Überschriften aus */
+h1::after, h2::after, h3::after, 
+h1::before, h2::before, h3::before {
+    display: none !important;
+    content: none !important;
+}
